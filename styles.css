@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+    border:1px solid #000;
+}
+.cell {
+    background-color: white;
+    outline: 1px solid gray;
+}
+.hovered {
+    background-color: #000;
+}

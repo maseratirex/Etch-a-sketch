@@ -15,9 +15,19 @@ function createGrid(size){
         }
         grid.appendChild(row)
     }
+    const cells = grid.querySelectorAll(".cell")
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseover", () => cell.classList.add("hovered"))
+    })
 }
 
-const cells = grid.querySelectorAll(".cell")
-cells.forEach((cell) => {
-    cell.addEventListener("mouseover", () => cell.classList.add("hovered"))
+
+const button = document.querySelector("button")
+button.addEventListener("click", () => {
+    let newSize = prompt("Enter the new grid size")
+    const cells = grid.querySelectorAll(".cell")
+    cells.forEach((cell) => {
+        cell.remove()
+    })
+    createGrid(newSize)
 })
